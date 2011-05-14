@@ -12,14 +12,16 @@
      <copy todir="${full.deploy.path}">
 
          <fileset dir=".">
-        	<exclude name="**/tests/**"></exclude>
-			<exclude name="**/docs/**"></exclude>
-			<exclude name="**/.git/**"></exclude>
-			<exclude name="**/.settings/**"></exclude>
-         	<exclude name="**/library/**"></exclude>
-			<exclude name="build.xml"></exclude>
-			<exclude name="build.properties"></exclude>
-			<exclude name="README"></exclude>
+            <exclude name="**/tests/**"></exclude>
+            <exclude name="**/docs/**"></exclude>
+            <exclude name="**/.git*/**"></exclude>
+            <exclude name="**/build.*/**"></exclude>
+            <exclude name="**/.buildpath/**"></exclude>
+            <exclude name="**/.project/**"></exclude>
+            <exclude name="**/.settings/**"></exclude>
+            <exclude name="**/.externalToolBuilders/**"></exclude>
+            <exclude name="**/library/**"></exclude>
+            <exclude name="**/README/**"></exclude>
          </fileset>
 
      </copy>
