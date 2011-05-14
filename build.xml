@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Build for Pretty much the only purpose is to deploy the apache htdocs as defined in build.properties -->
+<project name="proscuitto" default="deploy" basedir=".">
+
+ <property file="build.properties" />
+
+ <target name="deploy">
+
+     <delete dir="${full.deploy.path}"></delete>
+
+     <copy todir="${full.deploy.path}">
+
+         <fileset dir=".">
+        	<exclude name="**/tests/**"></exclude>
+			<exclude name="**/docs/**"></exclude>
+			<exclude name="**/.git/**"></exclude>
+			<exclude name="**/.settings/**"></exclude>
+         	<exclude name="**/library/**"></exclude>
+			<exclude name="build.xml"></exclude>
+			<exclude name="build.properties"></exclude>
+			<exclude name="README"></exclude>
+         </fileset>
+
+     </copy>
+
+ </target>
+
+</project>
