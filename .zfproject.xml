@@ -12,10 +12,48 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Drug">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
+        </controllerFile>
+        <controllerFile controllerName="Patient">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
+        </controllerFile>
+        <controllerFile controllerName="Prescription">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
+        </controllerFile>
+        <controllerFile controllerName="Schedule">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
+        </controllerFile>
+        <controllerFile controllerName="History">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Patients"/>
+          <dbTableFile dbTableName="Drugs"/>
+          <dbTableFile dbTableName="Prescriptions"/>
+          <dbTableFile dbTableName="Schdeules"/>
+          <dbTableFile dbTableName="History"/>
+        </dbTableDirectory>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
@@ -24,6 +62,69 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Drug">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Patient">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Prescription">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Schedule">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="History">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Drug">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Drug">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Drug">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Patient">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Patient">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Patient">
+            <viewScriptFile forActionName="remove"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Patient">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Prescription">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Prescription">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Prescription">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Schedule">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Schedule">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Schedule">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="History">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="History">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="History">
+            <viewScriptFile forActionName="delete"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
