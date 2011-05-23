@@ -30,6 +30,11 @@
 <div id="welcome">
     <h1>Welcome to the <span id="zf-name">Zend Framework!</span></h1>
 
+	<?php 
+	$env = getenv("APPLICATION_ENV");
+	echo "<h2>". $env ."</h2>";
+	?>
+	
     <h3>This is your project's main page</h3>
 
     <div id="more-information">
