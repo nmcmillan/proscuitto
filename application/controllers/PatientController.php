@@ -10,7 +10,8 @@ class PatientController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $patients = new Application_Model_DbTable_Patients();
+        $this->view->patients = $patients->fetchAll();
     }
 
     public function addAction()

@@ -43,7 +43,13 @@
           <actionMethod actionName="delete"/>
         </controllerFile>
       </controllersDirectory>
-      <formsDirectory enabled="false"/>
+      <formsDirectory>
+        <formFile formName="Patient"/>
+        <formFile formName="Drug"/>
+        <formFile formName="Schedule"/>
+        <formFile formName="Prescripton"/>
+        <formFile formName="History"/>
+      </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <dbTableDirectory>
