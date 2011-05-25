@@ -7,10 +7,10 @@ CREATE DATABASE proscuitto;
 
 Table Creation
 -------------------------------------------------
-CREATE TABLE drugs (_id INTEGER PRIMARY KEY,brand_name TEXT NOT NULL,type TEXT,strength INTEGER,strength_label TEXT,compound_name TEXT,manufacturer TEXT,interactions BLOB,nick_name TEXT,form TEXT,color INTEGER,shape TEXT,size TEXT);
+CREATE TABLE drugs (_id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,brand_name TEXT NOT NULL,type TEXT,strength INTEGER,strength_label TEXT,compound_name TEXT,manufacturer TEXT,interactions BLOB,nick_name TEXT,form TEXT,color INTEGER,shape TEXT,size TEXT);
 
-CREATE TABLE patients (_id INTEGER PRIMARY KEY,first_name TEXT NOT NULL,last_name TEXT,gender TEXT,age INTEGER,relations BLOB);
+CREATE TABLE patients (_id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,first_name TEXT NOT NULL,last_name TEXT,gender TEXT,age INTEGER,relations BLOB);
 
-CREATE TABLE prescriptions (_id INTEGER PRIMARY KEY,patient INTEGER NOT NULL,drug INTEGER NOT NULL,dose_type INTEGER NOT NULL,dose_size INTEGER,total_units INTEGER,date_filled INTEGER,dr_name TEXT,prescription_id TEXT,cost INTEGER,num_refills INTEGER,num_days_supplied INTEGER,date_expiration INTEGER,schedule_type INTEGER,scheduled INTEGER NOT NULL,day_sunday BLOB,day_monday BLOB,day_tuesday BLOB,day_wednesday BLOB,day_thursday BLOB,day_friday BLOB,day_saturday BLOB,FOREIGN KEY(patient) REFERENCES patients(_id),FOREIGN KEY(drug) REFERENCES drugs(_id));
+CREATE TABLE prescriptions (_id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,patient INTEGER NOT NULL,drug INTEGER NOT NULL,dose_type INTEGER NOT NULL,dose_size INTEGER,total_units INTEGER,date_filled INTEGER,dr_name TEXT,prescription_id TEXT,cost INTEGER,num_refills INTEGER,num_days_supplied INTEGER,date_expiration INTEGER,schedule_type INTEGER,scheduled INTEGER NOT NULL,day_sunday BLOB,day_monday BLOB,day_tuesday BLOB,day_wednesday BLOB,day_thursday BLOB,day_friday BLOB,day_saturday BLOB,FOREIGN KEY(patient) REFERENCES patients(_id),FOREIGN KEY(drug) REFERENCES drugs(_id));
 
-CREATE TABLE schedules (_id INTEGER PRIMARY KEY,prescription INTEGER NOT NULL,first_time INTEGER NOT NULL,schedule_interval INTEGER,next_time INTEGER,count_remain INTEGER,FOREIGN KEY(prescription) REFERENCES prescriptions(_id));
+CREATE TABLE schedules (_id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,prescription INTEGER NOT NULL,first_time INTEGER NOT NULL,schedule_interval INTEGER,next_time INTEGER,count_remain INTEGER,FOREIGN KEY(prescription) REFERENCES prescriptions(_id));
